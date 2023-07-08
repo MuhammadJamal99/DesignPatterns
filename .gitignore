@@ -1,0 +1,34 @@
+# Ignore Visual Studio files
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Ignore build output
+/bin/
+/obj/
+/packages/
+
+# Ignore NuGet packages
+*.nupkg
+**/packages/*
+!**/packages/*.targets
+!**/packages/*.props
+!**/packages/*.nuspec
+
+# Ignore project-specific files
+*.dll
+*.exe
+*.pdb
+*.cache
+*.log
+*.bak
+*.vspscc
+*.vssscc
+*.psess
+*.vsp
+*.psessproj
+*.userprefs
+*.scc
+/CreationalPatterns/Singleton/obj
