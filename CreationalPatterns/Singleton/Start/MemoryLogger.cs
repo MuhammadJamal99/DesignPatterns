@@ -13,7 +13,6 @@ public class MemoryLogger
         LogType = logType,
         CreatedAt = DateTime.UtcNow
     });
-
     public void LogInfo(string message) 
     {
         ++_InfoCount;
@@ -28,5 +27,11 @@ public class MemoryLogger
     {
         ++_ErrorCount;
         Log(message, LogTypeEnum.ERROR);
+    }
+    public void ShowLog() 
+    {
+        _logs.ForEach(x => Console.WriteLine(x));
+        Console.WriteLine("---------------------------------------------------------");
+        Console.WriteLine($"Info ({_InfoCount}) | Warning ({_WarningCount}) | Error ({_ErrorCount}) | Logs ({_logs.Count})");
     }
 }
